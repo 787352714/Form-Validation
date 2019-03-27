@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>submit</title>
+</head>
+
+<body>
+    <div class="container container-sm">
+        <div class="header">
+            <h1>form validtion</h1>
+        </div>
+        <div class="form">
+            <form id="signup">
+                <div class="input-container">
+                    <label>姓名</label>
+                    <input data-rule='maxlength:5|minlength:2' type="text" class="input-control" name="name">
+                    <div id="name-input-error" class="input-error">格式输入错误</div>
+                </div>
+    
+                <div class="input-container">
+                    <label>用户名</label>
+                    <input data-rule='pattern:"^[a-z0-9]*$"|maxlength:20|minlength:4' type="text" class="input-control" name="username">
+                    <div id="username-input-error" class="input-error">格式输入错误</div>
+                </div>
+
+                <div class="input-container">
+                    <label>年龄</label>
+                    <input data-rule='max:70|min:18' type="text" class="input-control" name="age">
+                    <div id="age-input-error" class="input-error">格式输入错误</div>
+                </div>
+
+                <div class="input-container">
+                    <label>自我介绍</label>
+                    <input data-rule='required:false' type="text" class="input-control" id="test" name="intro">
+                    <div id="intro-input-error" class="input-error">格式输入错误</div>
+                </div>
+
+                <div class="input-container">
+                    <label>密码</label>
+                    <input data-rule='pattern:"^[a-z0-9]*$"|maxlength:20|minlength:6' type="password" class="input-control" name="password">
+                    <div id="password-input-error" class="input-error">格式输入错误</div>
+                </div>
+
+                <div class="sub-btn">
+                    <button type="submit">提交</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/validator.js"></script>
+    <script src="../js/input.js"></script>
+    <script src="../js/main1.js"></script>
+</body>
+
+</html>
